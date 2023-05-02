@@ -24,28 +24,28 @@ namespace Corso
                 {"0,20", "0,21" },
                 {"0,30", "0,31" }
             };
-            string[,] codici2 = new string[3,2]
+            string[,] codici2 = new string[3, 2]
             {
                 {"0,10", "0,11"},
                 {"0,20", "0,21" },
                 {"0,30", "0,31" }
             };
             codici2[2, 1] = "0,32";
-            foreach(string codice in codici)
+            foreach (string codice in codici)
             {
                 Console.WriteLine(codice);
             }
             for (int riga = 0; riga < codici.GetLength(0); riga++)
             {
                 //GetLenght(0) prende lunghezza della prima dimensione
-                for(int colonna = 0; colonna < codici.GetLength(1); colonna++)
+                for (int colonna = 0; colonna < codici.GetLength(1); colonna++)
                 {
                     Console.WriteLine(codici[riga, colonna]);
                 }
             }
 
             //ARRAY 3D
-            string[,,] array3D = new string[2,2,2]
+            string[,,] array3D = new string[2, 2, 2]
             {
                 {
                     {"0,10","0,20"},
@@ -67,6 +67,29 @@ namespace Corso
                     }
                 }
             }
-        } 
+
+            //ARRAY IRREGOLARI
+            int[][] arrayIrregolare = new int[4][];
+            arrayIrregolare[0] = new int[] { 11, 21 };
+            arrayIrregolare[1] = new int[] { 234, 23, 33 };
+            arrayIrregolare[2] = new int[] { 12, 11 };
+            arrayIrregolare[3] = new int[] { 1, 2 };
+
+            int[][] arrayIrr2 =
+            {
+                new int[] {11,21},
+                new int[] {11,21},
+                new int[] { 11, 21 },
+                new int[] { 11, 21 }
+            };
+            Console.Write(arrayIrregolare[2][1]);
+            for (int riga = 0; riga < arrayIrregolare.Length; riga++)
+            {
+                for (int colonna = 0; colonna < arrayIrregolare.Length; colonna++)
+                {
+                    Console.WriteLine(arrayIrregolare[riga][colonna]);
+                }
+            }
+        }
     }
 }
